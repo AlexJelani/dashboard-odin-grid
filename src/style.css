@@ -1,0 +1,78 @@
+/* simple dashboard grid CSS */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 150px 1fr;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main";
+  height: 100vh;
+}
+
+/* Give every child element its grid name */
+.header {
+  grid-area: header;
+  background-color: #648ca6;
+}
+.main {
+  grid-area: main;
+  background-color: #8fd4d9;
+}
+.sidenav {
+  grid-area: sidenav;
+  background-color: #394263;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.sidenav {
+  display: flex; /* Will be hidden on mobile */
+  flex-direction: column;
+  grid-area: sidenav;
+  background-color: #394263;
+}
+
+.sidenav__list {
+  padding: 0;
+  margin-top: 85px;
+  list-style-type: none;
+}
+
+.sidenav__list-item {
+  padding: 20px 20px 20px 40px;
+  color: #ddd;
+}
+
+.sidenav__list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-gap: 20px;
+}
+
+.item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background-color: yellow;
+  height: 200px;
+}
+.item p {
+  margin: 0 0 5px 0;
+}
+.item3 {
+  background: mistyrose;
+  grid-column: 3/ span 2;
+}
+.item6 {
+  background: mistyrose;
+  grid-row: span 4;
+}
